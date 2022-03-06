@@ -11,7 +11,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
 public class TestTitle {
-	private WebDriver driver = null;
+	private RemoteWebDriver driver = null;
 
 	// public String URL = "https://www.aetna.com/";
 
