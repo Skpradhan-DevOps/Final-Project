@@ -18,6 +18,13 @@ public class TestTitle {
 	// public String URL = "https://www.aetna.com/";
 	// public void testEasy(String myURL, String myTitle) throws InterruptedException
 	// @Parameters({ "myURL", "myTitle" })
+	
+	@BeforeTest
+	public void beforeTest() throws InterruptedException, MalformedURLException {
+		DesiredCapabilities dc = DesiredCapabilities.chrome();
+		URL url=new URL("http://localhost:4444");
+		RemoteWebDriver driver = new RemoteWebDriver(url,dc);
+	}
 
 	@Test
 	public void testEasy() throws InterruptedException {
@@ -29,12 +36,7 @@ public class TestTitle {
 		// .contains("Health Insurance Plans | Aetna"));
 	}
 
-	@BeforeTest
-	public void beforeTest() throws InterruptedException, MalformedURLException {
-		DesiredCapabilities dc = DesiredCapabilities.chrome();
-		URL url=new URL("http://localhost:4444");
-		RemoteWebDriver driver = new RemoteWebDriver(url,dc);
-	}
+
 
 	@AfterTest
 	public void afterTest() {
