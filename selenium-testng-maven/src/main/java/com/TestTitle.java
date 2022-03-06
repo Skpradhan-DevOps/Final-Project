@@ -20,10 +20,10 @@ public class TestTitle {
 	@Test
 	@Parameters({ "myURL", "myTitle" })
 	public void testEasy(String myURL, String myTitle) throws InterruptedException {
-		driver.get(myURL);
+		driver.get("https://www.aetna.com/");
 		Thread.sleep(4000);
 		String title = driver.getTitle();
-		Assert.assertTrue(title.contains(myTitle));
+		Assert.assertTrue(title.contains("Health Insurance Plans | Aetna"));
 		// Assert.assertTrue(title
 		// .contains("Health Insurance Plans | Aetna"));
 	}
