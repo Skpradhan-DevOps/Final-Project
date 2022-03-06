@@ -13,7 +13,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 public class TestTitle {
-	private RemoteWebDriver driver = null;
+	//private RemoteWebDriver driver = null;
 
 	// public String URL = "https://www.aetna.com/";
 	// public void testEasy(String myURL, String myTitle) throws InterruptedException
