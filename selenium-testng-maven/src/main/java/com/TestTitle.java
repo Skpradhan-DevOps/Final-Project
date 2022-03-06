@@ -9,6 +9,8 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.Parameters;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import java.net.MalformedURLException;
+import java.net.URL;
 
 public class TestTitle {
 	private RemoteWebDriver driver = null;
