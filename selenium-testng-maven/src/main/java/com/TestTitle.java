@@ -11,7 +11,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import java.net.MalformedURLException;
 import java.net.URL;
-import org.openqa.selenium.chrome.ChromeOptions
+import org.openqa.selenium.chrome.ChromeOptions;
 
 public class TestTitle {
 	//private RemoteWebDriver driver = null;
