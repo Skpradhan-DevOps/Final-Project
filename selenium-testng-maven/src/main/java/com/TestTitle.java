@@ -11,6 +11,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import java.net.MalformedURLException;
 import java.net.URL;
+import org.openqa.selenium.chrome.ChromeOptions
 
 public class TestTitle {
 	//private RemoteWebDriver driver = null;
@@ -21,15 +22,29 @@ public class TestTitle {
 	
 	@Test
 	public void beforeTest() throws InterruptedException, MalformedURLException {
-		DesiredCapabilities dc = DesiredCapabilities.chrome();
+		WebDriverManager.chromedriver().setup();
+		ChromeOptions option= new ChromeOptions();
+		WebDriver driver = new ChromeDriver(option);
+		
+		URL url=new URL("http://localhost:4444/wd/hub");
+		RemoteWebDriver drivers = new RemoteWebDriver(url,(Capabilities) driver);
+		
+		drivers.get("https://www.aetna.com/");
+		Thread.sleep(4000);
+		String title = drivers.getTitle();
+		System.out.println("Title is : "+title);
+		Assert.assertTrue(title.contains("Health Insurance Plans | Aetna"));
+		
+		
+		/*DesiredCapabilities dc = DesiredCapabilities.chrome();
 		URL url=new URL("http://localhost:4444");
 		RemoteWebDriver driver = new RemoteWebDriver(url,dc);
 		driver.get("https://www.aetna.com/");
 		Thread.sleep(4000);
 		String title = driver.getTitle();
-		Assert.assertTrue(title.contains("Health Insurance Plans | Aetna"));
+		Assert.assertTrue(title.contains("Health Insurance Plans | Aetna"));*/
 		
-		driver.quit();
+		drivers.quit();
 	}
 
 	/*@Test
