@@ -12,6 +12,7 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import java.net.MalformedURLException;
 import java.net.URL;
 import org.openqa.selenium.chrome.ChromeOptions;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class TestTitle {
 	//private RemoteWebDriver driver = null;
@@ -26,7 +27,7 @@ public class TestTitle {
 		ChromeOptions option= new ChromeOptions();
 		WebDriver driver = new ChromeDriver(option);
 		
-		URL url=new URL("http://localhost:4444/wd/hub");
+		URL url=new URL("http://localhost:4444");
 		RemoteWebDriver drivers = new RemoteWebDriver(url,(Capabilities) driver);
 		
 		drivers.get("https://www.aetna.com/");
