@@ -29,7 +29,7 @@ public class TestTitle {
 	@BeforeTest
 	public void beforeTest() throws InterruptedException, MalformedURLException {
 		DesiredCapabilities dc = DesiredCapabilities.chrome();
-		URL url=new URL("http://localhost:4444/wd/hub");
+		URL url=new URL("http://localhost:4444");
 		RemoteWebDriver driver = new RemoteWebDriver(url,dc);
 	}
 
