@@ -17,8 +17,9 @@ public class TestTitle {
 
 	@Test
 	@Parameters({ "myURL", "myTitle" })
-	public void testEasy(String myURL, String myTitle) {
+	public void testEasy(String myURL, String myTitle) throws InterruptedException {
 		driver.get(myURL);
+		Thread.sleep(4000);
 		String title = driver.getTitle();
 		Assert.assertTrue(title.contains(myTitle));
 		// Assert.assertTrue(title
