@@ -2,9 +2,9 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Suite" parallel="none">
 	<test name="Test">
-		<parameter name="myURL" value="http://www.nguoianphu.com" />
+		<parameter name="myURL" value="https://www.aetna.com/" />
 		<parameter name="myTitle"
-			value="Home page Nguoi An Phu huyen An Phu tinh An Giang" />
+			value="Health Insurance Plans | Aetna" />
 		<classes>
 			<class name="com.TestTitle" />
 		</classes>
