@@ -7,6 +7,8 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.Parameters;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 
 public class TestTitle {
 	private WebDriver driver = null;
@@ -24,8 +26,10 @@ public class TestTitle {
 	}
 
 	@BeforeTest
-	public void beforeTest() throws Exception {
-		driver = new ChromeDriver();
+	public void beforeTest() throws InterruptedException, MalformedURLException {
+		DesiredCapabilities dc = DesiredCapabilities.chrome();
+		URL url=new URL("http://localhost:4444/wd/hub");
+		RemoteWebDriver driver = new RemoteWebDriver(url,dc);
 	}
 
 	@AfterTest
