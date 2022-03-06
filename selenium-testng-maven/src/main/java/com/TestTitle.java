@@ -16,10 +16,11 @@ public class TestTitle {
 	private RemoteWebDriver driver = null;
 
 	// public String URL = "https://www.aetna.com/";
+	// public void testEasy(String myURL, String myTitle) throws InterruptedException
+	// @Parameters({ "myURL", "myTitle" })
 
 	@Test
-	@Parameters({ "myURL", "myTitle" })
-	public void testEasy(String myURL, String myTitle) throws InterruptedException {
+	public void testEasy() throws InterruptedException {
 		driver.get("https://www.aetna.com/");
 		Thread.sleep(4000);
 		String title = driver.getTitle();
